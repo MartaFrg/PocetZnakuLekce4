@@ -15,7 +15,7 @@ namespace PocetZnakuLekce4
             int index;
             foreach (char pismeno in text)
             {
-                if (obsahujeZnak(listVsechZnaku, pismeno))
+                if (listVsechZnaku.Any(hod=>hod.znak== pismeno))
                 {
                     foreach (ZnakVListu znakVListu in listVsechZnaku) if (znakVListu.znak == pismeno) znakVListu.pocet++;
                 }
