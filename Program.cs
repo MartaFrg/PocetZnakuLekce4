@@ -12,7 +12,6 @@ namespace PocetZnakuLekce4
         {
             string text = "Tohle je můj pokusný text pro statistiku znaků.";
             List<ZnakVListu> listVsechZnaku = new List<ZnakVListu>();
-            int index;
             foreach (char pismeno in text)
             {
                 if (listVsechZnaku.Any(hod=>hod.znak== pismeno))
@@ -25,11 +24,6 @@ namespace PocetZnakuLekce4
                 }
             }
             vypisList(listVsechZnaku);
-        }
-        static bool obsahujeZnak(List<ZnakVListu> list, char p)
-        {
-            foreach (ZnakVListu znakVListu in list) if (znakVListu.znak==p) return true;
-            return false;
         }
         static void vypisList(List<ZnakVListu> listVsechZnaku)
         {
